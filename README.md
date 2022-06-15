@@ -14,6 +14,7 @@ Install zsh if you don't have it.
 
 ```bash
 sudo apt-get install zsh
+chsh -s $(which zsh)
 ```
 
 
