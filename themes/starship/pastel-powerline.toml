@@ -1,0 +1,155 @@
+format = """
+[](#9A348E)\
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#9F71DB)\
+$git_branch\
+$git_status\
+[](fg:#9F71DB bg:#1363DF)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:#1363DF bg:#1363DF)\
+$aws\
+[](fg:#1363DF bg:#2F8F9D)\
+$kubernetes\
+[](fg:#2F8F9D bg:#33658A)\
+$time\
+[ ](fg:#33658A)\
+$cmd_duration\
+\n$character\
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#DA627D"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[c]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#9F71DB"
+format = '[[ $symbol $branch ](bg:#9F71DB)]($style)'
+
+[git_status]
+style = "bg:#9F71DB"
+format = '[[($all_status$ahead_behind )](bg:#9F71DB)]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[java]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#1363DF"
+format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[[ ♥ $time ](bg:#33658A)]($style)'
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold yellow)"
+
+[kubernetes]
+style = "bg:#2F8F9D"
+format = '[⛵ $context \($namespace\)]($style)'
+disabled = false
+
+[kubernetes.context_aliases]
+# "(?P<user>^([\\w-]+@([\\w-]+\\.)+[\\w-]{2,4}))@(?P<cluster>([\\w-]+)).*" = "$cluster"
+"(?P<arn>^([\\w\\-:]+))/(?P<cluster>([\\w-]+))" = "$cluster"
+# "dev.local.cluster.k8s" = "dev"
+# ".*/openshift-cluster/.*" = "openshift"
+# "gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+
+[docker_context]
+symbol = " "
+style = "bg:#2F8F9D"
+format = '[[ $symbol $context ](bg:#2F8F9D)]($style) $path'
+
+[aws]
+format = '[$symbol($profile )(\($region\) )]($style)'
+style = "bg:#1363DF"
+symbol = "☁️ "
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+[aws.profile_aliases]
+CompanyGroupFrobozzOnCallAccess = 'Frobozz'

@@ -1,0 +1,7 @@
+# helm
+alias h='helm'
+
+# docker
+alias docker_image_purge='docker rmi $(docker images -f "dangling=true" -q)'
+alias docker_cont_purge='docker rm  $(docker ps --filter "status=exited" -q)'
+alias dp='docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"'
