@@ -1,12 +1,12 @@
 format = """
-[](#9A348E)\
+[](#D35D6E)\
 $username$hostname\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:#1572A1 fg:#D35D6E)\
 $directory\
-[](fg:#DA627D bg:#9F71DB)\
+[](fg:#1572A1 bg:#F5B17B)\
 $git_branch\
 $git_status\
-[](fg:#9F71DB bg:#1363DF)\
+[](fg:#F5B17B bg:#798777)\
 $c\
 $elixir\
 $elm\
@@ -17,9 +17,9 @@ $julia\
 $nodejs\
 $nim\
 $rust\
-[](fg:#1363DF bg:#1363DF)\
+[](fg:#798777 bg:#FD7E89)\
 $aws\
-[](fg:#1363DF bg:#2F8F9D)\
+[](fg:#FD7E89 bg:#2F8F9D)\
 $kubernetes\
 [](fg:#2F8F9D bg:#33658A)\
 $time\
@@ -34,18 +34,18 @@ $cmd_duration\
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
+style_user = "bg:#D35D6E"
+style_root = "bg:#D35D6E"
 format = '[$user]($style)'
 
 [hostname]
-style = "bg:#9A348E"
+style = "bg:#D35D6E"
 ssh_only = false
 format = "[@$hostname ]($style)"
 disabled = false
 
 [directory]
-style = "bg:#DA627D"
+style = "bg:#1572A1"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -66,62 +66,62 @@ truncate_to_repo = false
 
 [c]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [elixir]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [elm]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#9F71DB"
-format = '[[ $symbol $branch ](bg:#9F71DB)]($style)'
+style = "bg:#F5B17B"
+format = '[[ $symbol $branch ](fg:#52524E bg:#F5B17B)]($style)'
 
 [git_status]
-style = "bg:#9F71DB"
-format = '[[($all_status$ahead_behind )](bg:#9F71DB)]($style)'
+style = "bg:#F5B17B"
+format = '[[($all_status$ahead_behind )](fg:#52524E bg:#F5B17B)]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [java]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [nim]
 symbol = " "
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#1363DF"
-format = '[[ $symbol ($version) ](bg:#1363DF)]($style)'
+style = "bg:#798777"
+format = '[[ $symbol ($version) ](bg:#798777)]($style)'
 
 [time]
 disabled = false
@@ -152,7 +152,7 @@ format = '[[ $symbol $context ](bg:#2F8F9D)]($style) $path'
 
 [aws]
 format = '[$symbol($profile )(\($region\) )]($style)'
-style = "bg:#1363DF"
+style = "fg:#52524E bg:#FD7E89"
 symbol = "☁️ "
 [aws.region_aliases]
 ap-southeast-2 = "au"
