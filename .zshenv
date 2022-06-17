@@ -15,5 +15,5 @@ export LC_TIME=en_US.UTF-8
 # AWS
 export AWS_PROFILE=
 
-export INSTANCE_ID="`wget -qO- http://instance-data/latest/meta-data/instance-id`"
-export INSTANCE_NAME="`aws ec2 describe-tags --filters "Name=resource-id,Values=${INSTANCE_ID}" | jq -r '.Tags[] | select(.Key == "Name") | .Value'`"
+#export INSTANCE_ID="`wget -qO- http://instance-data/latest/meta-data/instance-id`"
+#export INSTANCE_NAME="`aws ec2 describe-tags --filters "Name=resource-id,Values=${INSTANCE_ID}" | jq -r '.Tags[] | select(.Key == "Name") | .Value'`"
