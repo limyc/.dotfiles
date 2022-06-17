@@ -1,7 +1,7 @@
 format = """
-[](#D35D6E)\
-[$username$hostname](fg:#FFFFFF bg:#D35D6E)\
-[](bg:#1572A1 fg:#D35D6E)\
+[](#FFA500)\
+[$env_var$username$hostname](fg:#1B2430 bg:#FFA500)\
+[](bg:#1572A1 fg:#FFA500)\
 $directory\
 [](fg:#1572A1 bg:#F5B17B)\
 $git_branch\
@@ -40,6 +40,11 @@ format = '$user'
 ssh_only = false
 format = "@$hostname "
 disabled = false
+
+[env_var]
+format = '$env_value/'
+variable = "INSTANCE_NAME"
+default = "-"
 
 [directory]
 style = "bg:#1572A1"
@@ -148,7 +153,7 @@ style = "bg:#2F8F9D"
 format = '[[ $symbol $context ](bg:#2F8F9D)]($style) $path'
 
 [aws]
-format = '[$symbol($profile )(\($region\) )]($style)'
+format = '[$symbol($profile)/($region )]($style)'
 style = "fg:#52524E bg:#FD7E89"
 symbol = "☁️ "
 [aws.region_aliases]
