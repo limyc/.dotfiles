@@ -138,6 +138,7 @@ disabled = false
 [kubernetes.context_aliases]
 # "(?P<user>^([\\w-]+@([\\w-]+\\.)+[\\w-]{2,4}))@(?P<cluster>([\\w-]+)).*" = "$cluster"
 "(?P<arn>^([\\w\\-:]+))/(?P<cluster>([\\w-]+))" = "$cluster"
+"project-([\\w]+)-(?P<cluster>([\\w-]+))" = "$cluster"
 # "dev.local.cluster.k8s" = "dev"
 # ".*/openshift-cluster/.*" = "openshift"
 # "gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
