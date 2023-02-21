@@ -8,3 +8,7 @@
 
 [url "https://x-access-token:token@github.com"]
   insteadOf = https://github.com
+
+[core]
+  editor = vim
+  pager = cat
