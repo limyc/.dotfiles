@@ -1,3 +1,4 @@
+export DISABLE_MAGIC_FUNCTIONS=true
 export PATH="$HOME/.local/bin:$PATH"
 export STARSHIP_CONFIG=~/.dotfiles/themes/starship/pastel-powerline.toml
 
